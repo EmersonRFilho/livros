@@ -43,7 +43,7 @@ jobs:
   
     runs-on: ubuntu-latest
     environment:
-      name: homol
+      name: hml
     needs: deploy-dev
     steps:
     - name: Run a one-line script
@@ -54,7 +54,7 @@ jobs:
   
     runs-on: ubuntu-latest
     environment:
-      name: praticandoapi152978
+      name: livros-boot
     needs: deploy-homol
     steps:
     - name: Run a one-line script
