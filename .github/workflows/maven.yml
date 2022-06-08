@@ -51,7 +51,7 @@ jobs:
       with:
         server_address: smtp.gmail.com
         server_port: 465
-        username: ${{ secrets.GMAIL_ADDRESS }}
+        username: emerso.roseiro@gmail.com
         # going with mail app password
         password: ${{ secrets.GMAIL_PASS }}
         subject: New version available
