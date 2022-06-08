@@ -46,9 +46,17 @@ jobs:
       name: hml
     needs: deploy-dev
     steps:
-    - name: Run a one-line script
-      run: echo Deploy Homol
-      
+    - name: Send email to testers
+      uses: dawidd6/action-send-mail@v1.3.0
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: emerso.roseiro
+        password: ${{ secrets.GMAIL_PASS }}
+        subject: New version available
+        body: The api just got updated for testing, please give us your feedback after testing so it may go to production
+        to: ${{ secrets.GMAIL_ADDRESS }}
+        from: ${{ secrets.GMAIL_ADDRESS }}
   
   deploy-prod:
   
