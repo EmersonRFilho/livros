@@ -52,6 +52,7 @@ jobs:
         server_address: smtp.gmail.com
         server_port: 465
         username: ${{ secrets.GMAIL_ADDRESS }}
+        # going with original password
         password: ${{ secrets.GMAIL_PASS }}
         subject: New version available
         body: The api just got updated for testing, please give us your feedback after testing so it may go to production
